@@ -1,0 +1,13 @@
+{
+  "name": "farfetch",
+  "version": "1.0.0",
+  "description": "NPM package made to be a lightweight alternative to axios or fetch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Pedro Campelo Matheus",
+  "license": "ISC"
+}
