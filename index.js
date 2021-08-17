@@ -28,14 +28,15 @@ function receiveFormattedJSON(res) {
         let parsedData = await parse(data);
         console.log(parsedData);
     });
+}
     // cannot seem to get data from parsedData and store it;
     
 function get(url) {
-    return https.get(url, async (res => {
+    return https.get(url, (res) => {
         let requestStatus = warnRequestStatus(url, res);
         let permission = evaluateRequest(requestStatus);
         permission === true ? receiveFormattedJSON(res) : console.log('Request not possible');
-    }));      
+    });     
 }
 
 // function post(url) {
@@ -64,7 +65,7 @@ function get(url) {
 
 
 function request(method, url) {
-    if (method === 'get') return get(url);  
+    if (method === 'get') { return get(url);  }
     // if (method === 'post') return post(url);  
     // if (method === 'put') return put(url); 
     // if (method === 'delete') return delet(url); 
